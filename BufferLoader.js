@@ -27,7 +27,7 @@
 				req.onload = function() {
 					loader._ctx.decodeAudioData(req.response, function(buffer) {
 						if (!buffer) {
-							throw "Decode audio has failed!";
+							throw "Decode audio has been failed!";
 						}
 						loader._buffers[key] = buffer;
 						loader._index++;
