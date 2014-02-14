@@ -1,12 +1,3 @@
-/**
- * BufferLoader.js
- *
- * @name     BufferLoader.js
- * @author   hazumu jo
- * @url      https://github.com/hazumu/BufferLoader.js
- * @version  0.0.1-beta
- * @license  Creative Commons Attribution-ShareAlike 2.1 Japan License
- */
 ;(function(global, document, undefined) {
 
 	function BufferLoader(ctx, callback) {
