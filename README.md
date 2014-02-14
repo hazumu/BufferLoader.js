@@ -3,7 +3,7 @@ BufferLoader.js
 
 Web Aoudio APIで利用するサウンド非同期で読み込む
 
-## usage
+## Usage
 
     var ctx = new (window.AudioContext || window.webkitAudioContext);
     var sounds = {
