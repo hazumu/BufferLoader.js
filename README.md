@@ -31,4 +31,4 @@ Messenger.js is licensed under the terms of the MIT License.
 
 ## Other
 
-- 参考: [http://www.html5rocks.com/ja/tutorials/webaudio/intro/](Getting Started with Web Audio API - HTML5 Rocks)
+- 参考: [Getting Started with Web Audio API - HTML5 Rocks](http://www.html5rocks.com/ja/tutorials/webaudio/intro/)
