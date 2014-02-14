@@ -1,7 +1,7 @@
 BufferLoader.js
 ========
 
-Web Aoudio APIで利用するサウンド非同期で読み込む
+Web Aoudio APIで利用する音源を非同期で読み込む
 
 ## Usage
 
