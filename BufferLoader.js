@@ -18,31 +18,27 @@
 
 		_load: function(key, url) {
 			var loader = this;
+			var req = new XMLHttpRequest();
+			req.open("GET", url, true);
+			req.responseType = "arraybuffer";
+			req.onload = function() {
+				loader._ctx.decodeAudioData(req.response, function(buffer) {
+					if (!buffer) {
+						throw "Decode audio has been failed!";
+					}
+					loader._buffers[key] = buffer;
+					loader._index++;
+					if (loader._index === loader._cap) {
+						loader._complete();
+					}
+				});
+			}
 
-			(function (key, url, loader) {
-				// リクエスト作成
-				var req = new XMLHttpRequest();
-				req.open("GET", url, true);
-				req.responseType = "arraybuffer";
-				req.onload = function() {
-					loader._ctx.decodeAudioData(req.response, function(buffer) {
-						if (!buffer) {
-							throw "Decode audio has been failed!";
-						}
-						loader._buffers[key] = buffer;
-						loader._index++;
-						if (loader._index === loader._cap) {
-							loader._complete();
-						}
-					});
-				}
+			req.onerror = function() {
+				throw "HXR is failed! The key is " + key + ".";
+			}
 
-				req.onerror = function() {
-					throw "HXR is failed! The key is " + key + ".";
-				}
-
-				req.send();
-			})(key, url, loader);
+			req.send();
 		},
 
 		_complete: function() {
