@@ -26,7 +26,7 @@ Web Aoudio APIで利用する音源を非同期で読み込む
 
 ## License
 
-Messenger.js is licensed under the terms of the MIT License.
+BufferLoader.js is licensed under the terms of the MIT License.
 
 
 ## Other
